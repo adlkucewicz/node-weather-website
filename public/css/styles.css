@@ -20,7 +20,8 @@ body {
 
 .about-text {
     flex-direction: column;
-    margin-left: 18px;
+    margin-left: 5%;
+    width: 45%;
 }
 
 header {
@@ -47,7 +48,7 @@ h1 {
 }
 
 .potrait {
-    width: 250px;
+    width: 40%;
 }
 
 input {
