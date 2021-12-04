@@ -62,7 +62,7 @@ app.get('/weather', (req, res) => {
                 return res.send({ error })
             }
         
-            weather(longitude, latitude, (error, {date, current_weather_summary, current_temp} = {}) => {
+            weather(longitude, latitude, (error, {date, current_weather_summary,  weather_icon, current_temp, current_feels_temp, current_humidity, max_temp, min_temp, chance_of_rain} = {}) => {
                 if (error) {
                     return res.send({ error })
                 }
@@ -72,7 +72,13 @@ app.get('/weather', (req, res) => {
                         address_provided: req.query.address,
                         location,
                         current_weather_summary,
-                        current_temp
+                        weather_icon,
+                        current_temp, 
+                        current_feels_temp, 
+                        current_humidity, 
+                        max_temp, 
+                        min_temp, 
+                        chance_of_rain
                     }
                 })
                 
